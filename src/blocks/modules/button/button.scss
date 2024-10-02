@@ -1,0 +1,25 @@
+.btn {
+	padding: 13px 25px;
+	height: 45px;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+	background-color: $main_color_green;
+	color: $main_color_sea;
+	border-radius: 20px;
+	transition: 0.5s;
+	text-transform: uppercase;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $main_color_dark_green;
+		box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.15);
+	}
+
+	&_white-bg {
+		background-color: $main_color_sea;
+		color: $main_color_green;
+
+		&:hover {
+			background-color: $color_white;
+		}
+	}
+}

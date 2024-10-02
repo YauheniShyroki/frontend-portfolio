@@ -1,0 +1,90 @@
+.promo {
+	min-height: 100vh;
+	position: relative;
+	background: url("../img/main_bg.jpg") no-repeat 50% / cover;
+	padding-top: 15vh;
+	z-index: 1;
+
+	.container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
+		grid-template-areas:
+		"empty promo_content";
+	}
+
+	&__content {
+		position: relative;
+		grid-area: promo_content;
+		height: 50vh;
+		width: 600px;
+	}
+
+	&__info {
+		position: relative;
+		z-index: 2;
+		width: 500px;
+		text-align: center;
+	}
+
+	&__mount {
+		position: absolute;
+		top: -48px;
+		left: 0;
+		width: 500px;
+		height: 285px;
+		z-index: 1;
+		@include light_rounded_bg;
+
+		&:before {
+			content: "";
+			position: absolute;
+			border: 5px solid $color_black;
+			border-radius: 50px;
+			left: 3%;
+			bottom: 5%;
+			width: 94%;
+			height: 90%;
+		}
+	}
+
+	&__title {
+		margin-top: 20px;
+		text-transform: uppercase;
+		line-height: 100%;
+
+		span {
+			margin-left: 14px;
+			font-family: 'Gloria Hallelujah', sans-serif;
+			font-size: 40px;
+		}
+	}
+
+	&__subtitle {
+		font-weight: 400;
+
+		span {
+			font-family: 'Gloria Hallelujah', sans-serif;
+			text-transform: uppercase;
+			font-size: 19.5px;
+		}
+	}
+
+	&__btns {
+		margin: 25px auto 0;
+		width: 325px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.btn {
+			margin-right: 10px;
+		}
+	}
+
+	&__link {
+		color: $color_black;
+		font-weight: 700;
+		font-size: 14px;
+	}
+}

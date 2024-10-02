@@ -1,0 +1,106 @@
+.about-me {
+	min-height: 700px;
+	background-color: $main_color_sea;
+	padding: 120px 0;
+
+	&__block {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-template-rows: 200px 250px;
+		grid-template-areas:
+		"photo about-me"
+		"photo spheres";
+	}
+
+	&__main-img {
+		grid-area: photo;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__description {
+		grid-area: about-me;
+		padding-left: 68px;
+		height: 230px;
+	}
+
+	&__subtitle {
+		position: relative;
+		font-weight: 500;
+		z-index: 1;
+		margin-left: 10px;
+
+		@include before_circle;
+		&:before {
+			left: -9px;
+		}
+
+		span {
+			color: $main_color_sea;
+		}
+	}
+
+	&__title {
+		margin-top: 10px;
+	}
+
+	&__text {
+		margin-top: 20px;
+	}
+
+	&__spheres {
+		grid-area: spheres;
+		padding-left: 68px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&-sphere {
+		position: relative;
+		z-index: 1;
+		width: 350px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+
+		&__icon {
+			display: block;
+			width: 150px;
+
+			&_rpa svg {
+				width: 50px;
+			}
+
+			&_web svg {
+				width: 50px;
+			}
+
+			&_telegram {
+				width: 160px;
+				svg {
+					width: 40px;
+				}
+			}
+		}
+
+		&__description {
+			margin-left: 25px;
+			margin-bottom: 40px;
+		}
+
+		&__title {
+			font-weight: 600;
+			font-size: 16px;
+		}
+
+		&__text {
+			margin-top: 10px;
+			font-weight: 500;
+			font-size: 14px;
+		}
+	}
+}
