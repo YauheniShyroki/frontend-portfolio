@@ -21,7 +21,7 @@
 .hamburger {
 	@include light_rounded_bg;
 	border-radius: 10px;
-	position: absolute;
+	position: fixed;
 	top: 20px;
 	right: 30px;
 	display: flex;
