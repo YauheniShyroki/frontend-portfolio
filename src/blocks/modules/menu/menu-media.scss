@@ -1,0 +1,28 @@
+@media (max-width: 768px) {
+	.hamburger-pointer {
+		display: none;
+	}
+}
+
+@media (max-width: 576px) {
+	.menu {
+		&__block {
+			width: 100%;
+			padding-left: 0;
+		}
+
+		&__list {
+			text-align: center;
+		}
+
+		&__link {
+			margin-left: 0;
+
+			a {
+				&:before {
+					content: none;
+				}
+			}
+		}
+	}
+}
