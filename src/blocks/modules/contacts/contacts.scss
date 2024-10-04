@@ -1,0 +1,114 @@
+.contacts {
+	min-height: 600px;
+	background-color: $main_color_sea;
+	padding: 60px 0 90px 0;
+
+	.divider {
+		margin: 10px 0 0;
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-template-areas:
+		"photo description"
+		"photo description";
+	}
+
+	&__main-img {
+		grid-area: photo;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__description {
+		grid-area: description;
+		padding-left: 68px;
+	}
+
+	&__subtitle {
+		margin-left: 12px;
+		text-align: left;
+
+		&:before {
+			top: -6px;
+			left: -12px;
+			transform: none;
+		}
+	}
+
+	&__title {
+		text-align: left;
+		margin-top: 10px;
+	}
+
+	&__form-subtitle, &__social {
+		margin-top: 20px;
+	}
+
+	&__link {
+		margin-right: 25px;
+
+		img {
+			max-width: 35px;
+			max-height: 35px;
+		}
+	}
+
+	&__form {
+		margin-top: 30px;
+		display: grid;
+		grid-template-columns: repeat(2, 280px);
+		grid-template-rows: 45px 190px 45px;
+		justify-content: space-between;
+		row-gap: 21px;
+
+		label {
+			display: block;
+			position: absolute;
+			top: -10px;
+			left: 12px;
+			height: 18px;
+			padding: 0 8px;
+			background-color: $main_color_sea;
+			font-size: 14px;
+			margin-bottom: 0;
+		}
+	}
+
+	&__input {
+		position: relative;
+
+		input {
+			width: 100%;
+			height: 100%;
+			padding: 0 20px;
+			font-size: 14px;
+			font-weight: 400;
+			background-color: $main_color_sea;
+		}
+	}
+
+	&__textarea {
+		position: relative;
+		grid-column: 1 / 3;
+
+		textarea {
+			width: 100%;
+			height: 100%;
+			resize: none;
+			padding: 20px;
+			font-size: 14px;
+			font-weight: 400;
+			background-color: $main_color_sea;
+		}
+	}
+
+	&__btn {
+		font-weight: 700;
+		font-size: 14px;
+		width: 200px;
+	}
+}

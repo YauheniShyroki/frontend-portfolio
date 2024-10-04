@@ -2,11 +2,9 @@
 	&:before {
 		content: "";
 		position: absolute;
-		top: -30%;
-		left: 5px;
 		width: 33px;
 		height: 33px;
-		background-color: $main_color_dark_green;
+		background-color: $main_color_green;
 		border-radius: 100%;
 		z-index: -1;
 	}

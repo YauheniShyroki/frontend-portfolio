@@ -1,0 +1,115 @@
+.skills {
+	min-height: 1150px;
+	padding: 60px 0;
+	background-color: $main_color_sea;
+
+	&__subtitle {
+		&:before {
+			transform: translateX(-62%);
+		}
+	}
+
+	&__wrapper {
+		margin-top: 60px;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 280px);
+		grid-template-rows: repeat(2, minmax(280px, auto));
+		grid-auto-rows: minmax(280px, auto);
+		justify-content: center;
+		gap: 7px;
+	}
+
+	&-item {
+		padding: 30px;
+		border: 1px solid $color_black;
+
+		&__img {
+			height: 65px;
+
+			&_wf {
+				margin: 20px 0;
+				height: 25px;
+			}
+		}
+
+		&__title {
+			margin-top: 20px;
+		}
+
+		&__text {
+			margin-top: 15px;
+			font-size: 14px;
+			font-weight: 400;
+		}
+	}
+
+	&-range {
+		margin-top: 120px;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 350px);
+		grid-template-rows: minmax(70px, auto);
+		justify-content: center;
+		gap: 30px;
+
+		&-item {
+
+			&__head {
+				display: flex;
+				justify-content: space-between;
+				align-content: space-between;
+				margin-right: 5px;
+			}
+
+			&__title {
+				position: relative;
+				margin-left: 15px;
+				font-weight: 600;
+				font-size: 14px;
+				z-index: 1;
+
+				@include before_circle;
+				&:before {
+					top: -7px;
+					left: -15px;
+				}
+
+				span {
+					color: $main_color_sea;
+				}
+			}
+
+			&:nth-child(3), &:nth-child(4) {
+				.skills-range-item__title {
+					margin-left: 10px;
+
+					&:before {
+						left: -10px;
+					}
+				}
+			}
+
+			&__percent {
+				font-weight: 500;
+				font-size: 14px;
+			}
+
+			&__lines {
+				margin-top: 20px;
+				position: relative;
+			}
+
+			&__empty-line, &__full-line {
+				width: 100%;
+				border: 10px solid $main_color_light_green;
+				border-radius: 20px;
+			}
+
+			&__full-line {
+				position: absolute;
+				left: 0;
+				top: 0;
+				border-color: $main_color_green;
+			}
+		}
+	}
+}

@@ -1,12 +1,16 @@
 .about-me {
-	min-height: 700px;
+	min-height: 600px;
 	background-color: $main_color_sea;
-	padding: 120px 0;
+	padding: 120px 0 60px 0;
+
+	.divider {
+		margin: 10px 0 0;
+	}
 
 	&__block {
 		display: grid;
 		grid-template-columns: 1fr 2fr;
-		grid-template-rows: 200px 250px;
+		grid-template-rows: repeat(2, minmax(250px, auto));
 		grid-template-areas:
 		"photo about-me"
 		"photo spheres";
@@ -23,40 +27,39 @@
 	&__description {
 		grid-area: about-me;
 		padding-left: 68px;
-		height: 230px;
+		min-height: 230px;
 	}
 
 	&__subtitle {
-		position: relative;
-		font-weight: 500;
-		z-index: 1;
-		margin-left: 10px;
+		margin-left: 12px;
+		text-align: left;
 
-		@include before_circle;
 		&:before {
-			left: -9px;
-		}
-
-		span {
-			color: $main_color_sea;
+			top: -6px;
+			left: -12px;
+			transform: none;
 		}
 	}
 
 	&__title {
+		text-align: left;
 		margin-top: 10px;
 	}
 
 	&__text {
 		margin-top: 20px;
+		font-weight: 400;
+		font-size: 15px;
 	}
 
 	&__spheres {
 		grid-area: spheres;
 		padding-left: 68px;
+		margin-top: 30px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 	}
 
 	&-sphere {
@@ -69,20 +72,17 @@
 
 		&__icon {
 			display: block;
-			width: 150px;
-
-			&_rpa svg {
-				width: 50px;
+			width: 50px;
+			@include before_circle;
+			&:before {
+				top: -7px;
+				left: -4px;
 			}
 
-			&_web svg {
-				width: 50px;
-			}
-
-			&_telegram {
-				width: 160px;
-				svg {
-					width: 40px;
+			svg path {
+				&:hover {
+					transition: fill 0.5s;
+					fill: $main_color_dark_green;
 				}
 			}
 		}
@@ -99,8 +99,7 @@
 
 		&__text {
 			margin-top: 10px;
-			font-weight: 500;
-			font-size: 14px;
+			font-weight: 400;
 		}
 	}
 }
