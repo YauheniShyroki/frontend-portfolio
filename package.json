@@ -1,12 +1,9 @@
 {
-    "name": "gulp-scss-starter",
-    "description": "Frontend development with pleasure",
-    "author": "Andrey Gorokhov",
+    "name": "portfolio",
+    "description": "Frontend Portfolio",
+    "author": "Yauheni Shyroki",
     "license": "GPL-3.0-only",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/andreyalexeich/gulp-scss-starter.git"
-    },
+    "homepage": "https://yauhenishyroki.github.io/frontend-portfolio",
     "scripts": {
         "dev": "gulp",
         "build": "gulp prod --production",
