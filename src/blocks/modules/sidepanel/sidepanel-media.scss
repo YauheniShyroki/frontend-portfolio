@@ -1,4 +1,10 @@
-@media (max-width: 992px) {
+@media (max-width: 1400px) {
+	.sidepanel {
+		left: 30px;
+	}
+}
+
+@media (max-width: 1200px) {
 	.sidepanel {
 		display: none;
 	}

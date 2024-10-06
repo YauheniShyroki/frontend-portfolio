@@ -1,0 +1,112 @@
+@media (max-width: 992px) {
+	.about-me {
+		&__block {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.about-me {
+		&__block {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(3, minmax(250px, auto));
+			grid-template-areas:
+			"about-me"
+			"photo"
+			"spheres";
+		}
+
+		&__main-img img {
+			height: 400px;
+		}
+
+		&__description {
+			padding-left: 0;
+		}
+
+		&__subtitle {
+			margin-left: 0;
+			text-align: center;
+
+			&:before {
+				left: 40.5%;
+			}
+		}
+
+		&__title {
+			text-align: center;
+		}
+
+		.divider {
+			display: block;
+			margin: 10px auto 0 auto;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.about-me {
+		&__main-img {
+			margin-top: 10px;
+
+			img {
+				height: 300px;
+			}
+		}
+
+		&__description {
+
+		}
+
+		&__spheres {
+			padding-left: 0;
+		}
+
+		&-sphere {
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.about-me {
+		&__subtitle {
+			&:before {
+				left: 40%;
+			}
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	.about-me {
+		&__subtitle {
+			&:before {
+				left: 39%;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 400px) {
+	.about-me {
+		&__subtitle {
+			&:before {
+				left: 37%;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 350px) {
+	.about-me {
+		&__subtitle {
+			&:before {
+				left: 35%;
+			}
+		}
+	}
+}

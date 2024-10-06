@@ -10,6 +10,8 @@ function toggleMenuActive(elem) {
 
         //remove animation after the user clicked
         hamburgerPointerArrow.classList.remove('animate__animated');
+        hamburgerPointerArrow.classList.remove('animate__headShake');
+        hamburgerPointerArrow.classList.remove('animate__infinite');
     });
 }
 
